@@ -3,7 +3,7 @@ title: Hexo使用笔记
 date: 2016-06-20 15:53:46
 tags: [随笔,Hexo,笔记]
 ---
-#### HEXO+Github搭建博客
+#### HEXO+Github搭建个人博客
 
 <!--more-->
 
