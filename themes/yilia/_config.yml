@@ -35,7 +35,7 @@ open_in_new: false
 
 # Miscellaneous
 google_analytics: ''
-favicon: /favicon.png
+favicon: "http://imgsrc.baidu.com/forum/w%3D580/sign=baf99437e51190ef01fb92d7fe199df7/743caa1ea8d3fd1f7ef8e6e0324e251f97ca5faa.jpg"
 
 #你的头像url
 avatar: "http://imgsrc.baidu.com/forum/w%3D580/sign=baf99437e51190ef01fb92d7fe199df7/743caa1ea8d3fd1f7ef8e6e0324e251f97ca5faa.jpg"
