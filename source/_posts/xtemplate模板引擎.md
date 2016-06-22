@@ -6,6 +6,8 @@ tags: [模板引擎, xtemplate, 前端]
 转自：[http://book.apebook.org/minghe/koa-action/xtemplate/index.html](http://book.apebook.org/minghe/koa-action/xtemplate/index.html)
 ####适用于 koa 的模板引擎选择非常多，比如 jade、ejs、nunjucks、xtemplate 等。
 
+![](http://media02.hongkiat.com/wallpapers-coder-geek-designer/code-geek-designer-wallpapers.jpg)
+
 <!--more-->
 # 几个模板引擎的对比 #
 

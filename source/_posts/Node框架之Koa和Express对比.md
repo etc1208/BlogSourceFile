@@ -5,14 +5,15 @@ tags: [Node, Express, Koa, 前端]
 ---
 Express是一个简洁而灵活的web开发框架，使用简单而功能强大。Koa相对更为年轻，是Express框架原班人马基于ES6新特性重新开发的敏捷开发框架。
 
+![](http://www.mincoder.com/images/201509/n3yOMte40hUhkicb.jpg)
+
+<!--more-->
+
 我的两个demo：
 
 - Express Demo:[https://github.com/etc1208/Node-Demo/tree/master/yh-test](https://github.com/etc1208/Node-Demo/tree/master/yh-test)
 
 - Koa Demo:[https://github.com/etc1208/Koa-demo](https://github.com/etc1208/Koa-demo)
-
-<!--more-->
-
 Express和koa都是服务端的开发框架，服务端开发的重点是对`HTTP Request`和`HTTP Response`两个对象的封装和处理，应用的生命周期维护以及视图的处理等。
 
 Express主要基于Connect中间件框架，功能丰富，随取随用，并且框架自身封装了大量便利的功能，比如路由、视图处理等等。而koa主要基于co中间件框架，框架自身并没集成太多功能，大部分功能需要用户自行require中间件去解决，但是由于其基于ES6 generator特性的中间件机制，解决了长期诟病的“callback hell”和麻烦的错误处理的问题.

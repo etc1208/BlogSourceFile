@@ -5,6 +5,8 @@ tags: [随笔,Hexo,笔记]
 ---
 #### HEXO+Github搭建个人博客
 
+![HEXO+Github](http://upload.chinaz.com/2015/1016/1444964380585.png)
+
 <!--more-->
 
 ### 配置环境

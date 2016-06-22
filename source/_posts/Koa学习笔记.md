@@ -7,13 +7,15 @@ tags: [Koa, Node, 前端, 笔记]
 
 koa.js 是下一代的node.js框架，由Express团队开发，通过生成器（generators JavaScript 1.7新引入的，用于解决回调嵌套的方案），减少异步回调，提高代码的可读性和可维护性，同时改进了错误处理.
 
+![Koa](http://image.lxway.com/thumb/280x220/4/15/415ba8e9778a4d424cbf8b0bebdbebe7.png)
+
+<!--more-->
+
 koa 的先天优势在于 generator，带来的主要好处如下：
 
 - 更优雅、简单、安全的中间件机制，后面章节会详细说明
 - 更优雅、简单的异常处理
 - 更优雅、简单的异步编程方式
-
-<!--more-->
 # 安装 generator-k #
 
 `generator-k` 是koa项目工程生成器，带有经过筛选的优秀中间件，生成即用。
