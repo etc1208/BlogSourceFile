@@ -232,8 +232,50 @@ e.g.
 
 ----------
 
-**背景定位**
+**水平/垂直居中**
 
+`水平居中`： 如果是一个行内元素，就设置它的父元素text-align:center;如果是一个块级元素，就设置自身margin:auto;
+
+`垂直居中`：（重点！！！！！！！！！！！！！！！！）
+
+	
+    基于绝对定位的方案
+	xxx {
+		position:absolute;
+		top:50%;
+		left:50%;
+		margin-top:-3em;
+		margin-left: -9em;
+		width:18em;
+		height:6em;
+	}
+	
+
+	基于变形：
+	xxx {
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform: translate(-50%, -50%);
+	}
+
+	
+	基于视口单位：
+	xxx {
+		width: 18em;
+		margin: 50vh auto 0;
+		transform: translateY(-50%);
+	}
+
+
+	基于Flexbox方案（最好的！！！）
+	xxx-father{
+		display: flex;
+	}
+	xxx{
+		margin: auto;
+	}
+	
 
 
 
