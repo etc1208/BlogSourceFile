@@ -71,19 +71,4 @@ npm install hexo-deployer-git --save
         hexo deploy   或：hexo d
 
 
-----------
 
-# 在一台新机器上写博客： #
-
-需要执行以下步骤：
-
-
-> 将搭建博客的原始文件部署到`github`远程仓库上
-
-> 在新机器上`git clone` 远程仓库到本地
-
-> 依次执行以下命令：
-	
-	npm install //安装依赖
-	npm install -g hexo  //安装hexo
-	npm install hexo-deployer-git --save  //用于生成部署博客到git
