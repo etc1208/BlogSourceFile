@@ -1,7 +1,7 @@
 ---
 title: React基础
 date: 2016-06-30 08:35:19
-tags:[React, 前端]
+tags: [React, 前端]
 ---
 
 ####用于构建用户界面的JAVASCRIPT库
