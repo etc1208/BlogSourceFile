@@ -4,19 +4,16 @@ date: 2016-09-06 11:47:33
 tags: [flexbox, 弹性盒模型, css3]
 ---
 
-原文链接：*[http://caibaojian.com/flexbox-guide.html](http://caibaojian.com/flexbox-guide.html)*
+原文链接：*[http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)*
 
-来自CSS Tricks上的一个教程，原文为：A Complete Guide to Flexbox。文中详细的介绍了新版的弹性盒子的相关属性，并且给出了几个使用例子。是新手入门flexbox的一个优秀教程。当然里面的内容也大部分是根据w3c的文章来写的。里面的每个属性都给出了一张示例图，非常容易理解。
+弹性布局（flexible box）模块（目前是w3c候选的推荐）旨在提供一个更加有效的方式来布置，对齐和分布在容器之间的各项内容，即使它们的大小是未知或者动态变化的。
+
+弹性布局的主要思想是让容器有能力来改变项目的宽度和高度，以填满可用空间（主要是为了容纳所有类型的显示设备和屏幕尺寸）的能力。
 
 ![flexbox-CSS3弹性盒模型](http://img.mukewang.com/54c8a290000122c506000338-590-330.jpg)
 
 
 <!--more-->
-
-
-弹性布局（flexible box）模块（目前是w3c候选的推荐）旨在提供一个更加有效的方式来布置，对齐和分布在容器之间的各项内容，即使它们的大小是未知或者动态变化的。
-
-弹性布局的主要思想是让容器有能力来改变项目的宽度和高度，以填满可用空间（主要是为了容纳所有类型的显示设备和屏幕尺寸）的能力。
 
 
 #### 注意： Flexbox布局是最合适的一个应用程序的组件，以及小规模的布局，而网格布局是用于较大规模的布局。
