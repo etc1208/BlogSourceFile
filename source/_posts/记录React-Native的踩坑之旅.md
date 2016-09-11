@@ -34,7 +34,7 @@ tags: [ReactNative]
 - JDK1.8以上
 - 安装完成后，在Android Studio的启动欢迎界面中选择Configure | SDK Manager。在SDK Platforms窗口中，选择Show Package Details，然后在Android 6.0 (Marshmallow)中勾选Google APIs、Intel x86 Atom System Image、Intel x86 Atom_64 System Image以及Google APIs Intel x86 Atom_64 System Image。
 - 在SDK Tools窗口中，选择Show Package Details，然后在Android SDK Build Tools中勾选Android SDK Build-Tools 23.0.1。（必须是这个版本）
-#### 如果此时已经安装有其他版本的Android SDK Build-Tools，记得反选下去！！！只保留23.0.1
+
 - 安卓需要配置环境变量如下：向~/.bash_profile文件中添加：
 
 		export ANDROID_HOME=~/Library/Android/sdk
