@@ -55,3 +55,27 @@ tags: [ReactNative]
 	react-native init xxxxx
 即可初始化生成一个RN项目结构，项目名为xxxxx。
 
+-------
+
+## RN----导入组件，import from 'xxxx'的用法详解
+就挑几种在RN中，特别是初学期常用的方式来说说：
+
+	1.import React ,{ Component } from 'react';
+
+这是RN 0.26后导入React的方式，这意思是，导入‘react’文件里export的一个默认的组件，将其命名为React以及Component这个非默认组件
+
+
+	2.import Home from './compoments/Home';
+
+这是导入‘compoments/Home’文件里export的带default关键字的组件，即默认组件,将其命名为Home(可以自定义命名)
+
+	3.import { Home } from './compoments/Home';
+
+导入‘compoments/Home’文件里export的叫Home的非默认组件，注意，非默认，以及命名Home
+
+	4.import { Home , Discover } from './compoments/Home';
+跟3的差不多，不过是{  },可以导入多个组件，用，隔开就可以
+
+	5.import * as Home from'./compoments/Home';
+
+意思是将./compoments/Home'文件里的所有非默认组件，全部集结成一个Home模型组件，命名可以自定义，然后可以通过点语法，来使用组件里面的所有export的组件
