@@ -137,4 +137,108 @@ React Native中的Flexbox的工作原理和web上的CSS基本一致，当然也�
 	// 错误
 	<Image source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}} />
 
+- 在运行RN应用时，可以在终端中运行如下命令来查看控制台的日志：
+	
+		$ react-native log-ios
+		$ react-native log-android
+		
+-------
+
+## 特定平台扩展名
+- React Native会检测某个文件是否具有.ios.或是.android.的扩展名，然后根据当前运行的平台加载正确对应的文件。
+
+假设你的项目中有如下两个文件：
+
+	BigButton.ios.js
+	BigButton.android.js
+这样命名组件后你就可以在其他组件中直接引用，而无需关心当前运行的平台是哪个。
+
+	import BigButton from './components/BigButton';
+React Native会根据运行平台的不同引入正确对应的组件。
+
+- 还有个实用的方法是Platform.select()，它可以以Platform.OS为key，从传入的对象中返回对应平台的值，见下面的示例：
+
+		var { Platform } = React;
+		
+		var styles = StyleSheet.create({
+		  container: {
+		    flex: 1,
+		    ...Platform.select({
+		      ios: {
+		        backgroundColor: 'red',
+		      },
+		      android: {
+		        backgroundColor: 'blue',
+		      },
+		    }),
+		  },
+		});
+上面的代码会根据平台的不同返回不同的container样式——iOS上背景色为红色，而android为蓝色。
+
+这一方法可以接受任何合法类型的参数，因此你也可以直接用它针对不同平台返回不同的组件，像下面这样：
+
+	var Component = Platform.select({
+	  ios: () => require('ComponentIOS'),
+	  android: () => require('ComponentAndroid'),
+	})();
+	
+	<Component />;
+## 平台模块
+React Native提供了一个检测当前运行平台的模块。如果组件只有一小部分代码需要依据平台定制，那么这个模块就可以派上用场。
+
+	import { Platform } from 'react-native';
+	
+	var styles = StyleSheet.create({
+	  height: (Platform.OS === 'ios') ? 200 : 100,
+	});
+#### Platform.OS在iOS上会返回ios，而在Android设备或模拟器上则会返回android。
+
+## 检测Android版本
+在Android上，平台模块还可以用来检测当前所运行的Android平台的版本：
+
+	import { Platform } from 'react-native';
+	
+	if(Platform.Version === 21){
+	  console.log('Running on Lollipop!');
+	}
+	
+-------
+
+### 注意：如果Text元素在Text里边，可以考虑为inline， 如果单独在View里边，那就是Block。
+
+### 实际上React-native里边是没有样式继承这种说法的， 但是对于Text元素里边的Text元素存在继承。->直接继承父亲Text的
+
+--------
+## RN布局总结：
+
+- react 宽度基于pt为单位， 可以通过Dimensions 来获取宽高，PixelRatio 获取密度，如果想使用百分比，可以通过获取屏幕宽度手动计算。(pt * 像素密度 = px)
+
+- 基于flex的布局
+
+		view默认宽度为100%
+		水平居中用alignItems, 垂直居中用justifyContent（这是在默认情况下RN向下排列）
+		基于flex能够实现现有的网格系统需求，且网格能够各种嵌套无bug
+
+- 图片布局
+
+
+		通过Image.resizeMode来适配图片布局，包括contain, cover, stretch
+		默认不设置模式等于cover模式
+		contain模式自适应宽高，给出高度值即可
+		cover铺满容器，但是会做截取
+		stretch铺满容器，拉伸
+- 定位
+
+
+		定位相对于父元素，父元素不用设置position也行
+		padding 设置在Text元素上的时候会存在bug。所有padding变成了marginBottom
+
+- 文本元素
+
+
+		文字必须放在Text元素里边
+		Text元素可以相互嵌套，且存在样式继承关系
+		numberOfLines 需要放在最外层的Text元素上，且虽然截取了文字但是还是会占用空间
+		
+-------
 
